@@ -5,17 +5,17 @@
             <h3 class="panel-title"> Calculadora + ${pageRender.getUser().fullName}</h3>
         </div>
         <div class="panel-body">
-            <div class="row">
+            <div class="row m-2 p-2">
                 <input type="number" name="number1" id="number1" class="form-control col-md-2">
                 <input type="number" name="number2" id="number2" class="form-control col-md-2">
                 <input type="number" name="result" id="result" readonly class="form-control col-md-2">
             </div>
 
-            <div class="row">
-                <button class="btn btn-sm btn-primary col-md-1" id="btnSoma" data-btnSoma>+</button>
-                <button class="btn btn-sm btn-primary col-md-1" id="btnSub" data-btnSub>-</button>
-                <button class="btn btn-sm btn-primary col-md-1" id="btnMult" data-btnMult>X</button>
-                <button class="btn btn-sm btn-primary col-md-1" id="btnDiv" data-btnDiv>%</button>
+            <div class="row m-2 p-2">
+                <button class="btn btn-sm btn-primary col-md-1" data-btnSoma>+</button>
+                <button class="btn btn-sm btn-primary col-md-1"  data-btnSub>-</button>
+                <button class="btn btn-sm btn-primary col-md-1"  data-btnMult>X</button>
+                <button class="btn btn-sm btn-primary col-md-1"  data-btnDiv>%</button>
             </div>
         </div>
     </div>

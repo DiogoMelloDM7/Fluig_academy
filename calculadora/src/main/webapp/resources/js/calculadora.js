@@ -21,30 +21,34 @@ var MyWidget = SuperWidget.extend({
 
     multiplica : function(){
 
-        let valor1 = $("#number1").val();
-        let valor2 = $("#number2").val();
-        $("#result").text(valor1 * valor2);
+        let valor1 = parseFloat($("#number1").val());
+        let valor2 = parseFloat($("#number2").val());
+        $("#result").val(valor1 * valor2);
+        console.log(valor1 * valor2);
     },
 
     soma : function(){
 
-        let valor1 = $("#number1").val();
-        let valor2 = $("#number2").val();
-        $("#result").text(valor1 + valor2);
+        let valor1 = parseFloat($("#number1").val());
+        let valor2 = parseFloat($("#number2").val());
+        $("#result").val(valor1 + valor2);
+        console.log(valor1 + valor2);
     },
 
     divide : function(){
 
-        let valor1 = $("#number1").val();
-        let valor2 = $("#number2").val();
-        $("#result").text(valor1 / valor2);
+        let valor1 = parseFloat($("#number1").val());
+        let valor2 = parseFloat($("#number2").val());
+        $("#result").val(valor1 / valor2);
+        console.log(valor1 / valor2);
     },
 
     subtrai : function(){
 
-        let valor1 = $("#number1").val();
-        let valor2 = $("#number2").val();
-        $("#result").text(valor1 - valor2);
+        let valor1 = parseFloat($("#number1").val());
+        let valor2 = parseFloat($("#number2").val());
+        $("#result").val(valor1 - valor2);
+        console.log(valor1 - valor2);
     },
 
 
