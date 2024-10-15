@@ -1,0 +1,59 @@
+<div id="MyWidget_${instanceId}" class="super-widget wcm-widget-class fluig-style-guide" data-params="MyWidget.instance()">
+    <div class="row">
+        <form role="form">
+            <div class="form-group col-md-2">
+                <label for="periodoInicial">Selecione a data inicial</label>
+                <input type="text" name="periodoInicial" id="periodoInicial" class="form-control">
+            </div>
+
+            <div class="form-group col-md-2">
+                <label for="periodoFinal">Selecione a data Final</label>
+                <input type="text" name="periodoFinal" id="periodoFinal" class="form-control">
+            </div>
+
+            <div class="col-md-2">
+                <button type="button" id="pesquisarPeriodo" class="btn btn-sm btn-success" data-pesquisarPeriodo>Buscar</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">   
+        <table id="tabelaPesquisa" class="table table-striped">
+            <thead>
+
+            </thead>
+
+            <tbody>
+
+            </tbody>
+
+            <tfoot>
+
+            </tfoot>
+        </table>
+    </div>
+
+    <input type="zoom" class="form-control" id="responsavel" name="responsavel" data-zoom="
+    {
+        'displayKey':'DD_PRODUTO',
+        'placeholder': 'Filtrar',
+        'datasetId':'dsLiberacaoLotesProtheus',
+        'fields':[{
+            'field':'DD_PRODUTO',
+            'label':'Código',
+            'standard':true
+        },
+        {
+            'field':'B1_DESC',
+            'label':'Descrição',
+            'standard':true
+        }
+        ]
+    }">
+
+</div>
+
+<script>
+	let mySimpleCalendar = FLUIGC.calendar('#periodoInicial');
+    let mySimpleCalendar2 = FLUIGC.calendar('#periodoFinal');
+</script>
