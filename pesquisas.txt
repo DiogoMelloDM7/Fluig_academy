@@ -1,0 +1,43 @@
+showNewDatasetFull: function () {
+    let $table = $("#tabelaPesquisa");
+    let $thead = $table.find("thead");
+    let $tbody = $table.find("tbody");
+
+    // Limpa o conteúdo anterior
+    $thead.empty();
+    $tbody.empty();
+
+    // Busca o dataset
+    try {
+        let dataset = this.retornaDsLiberacaoLotes();
+        this.showDataset(dataset);
+    } catch (erro) {
+        // Exibe a mensagem de erro dentro do tbody
+        $tbody.append("<tr><td colspan='100%'>" + erro + "</td></tr>");
+    }
+},
+
+showDataset: function (dataset) {
+    let $table = $("#tabelaPesquisa");
+    let $thead = $table.find("thead");
+    let $tbody = $table.find("tbody");
+
+    // Monta o cabeçalho
+    let $headerRow = $("<tr></tr>");
+    dataset.columns.forEach(function (column) {
+        $headerRow.append("<th>" + column + "</th>");
+    });
+    $thead.append($headerRow);
+
+    // Monta os registros
+    dataset.values.forEach(function (row) {
+        let $row = $("<tr></tr>");
+        dataset.columns.forEach(function (column) {
+            $row.append("<td>" + row[column] + "</td>");
+        });
+        $tbody.append($row);
+    });
+}
+
+Alteração para exibição com JQuery.
+
